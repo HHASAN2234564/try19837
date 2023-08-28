@@ -123,7 +123,52 @@
     width: 80px;
 
   }
-@media (max-width: 300px) {
-  body {
-    font-size: 16px;
-  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;}
+    }
+
+      td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+        
+        
+      }
+      
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 500px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    .t1{
+        border:none ;
+        background-color: white;
+        color: black;
+        width: 70px;
+
+       
+
+    } 
+
+    th{
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+        text-align: center;
+
+    }
+    
+    .m1{
+        text-align: left;
+        vertical-align: middle;
+        
+    }
+
+    
+  
