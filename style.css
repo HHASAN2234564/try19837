@@ -171,7 +171,7 @@
     }
     @media (max-width: 600px) {
   table {
-    font-size: 14px; /* Decrease font size for better readability on small screens */
+    font-size: 10px; /* Decrease font size for better readability on small screens */
   }
 
   td {
