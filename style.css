@@ -172,11 +172,17 @@
     @media (max-width: 600px) {
   table {
     font-size: 10px; /* Decrease font size for better readability on small screens */
+    color:black;
   }
 
   td {
     padding: 5px; /* Decrease cell padding for better fit */
   }
+         .t1{
+        border:none ;
+        background-color: white;
+        color: black;
+        width: 70px;
 }
     
   
