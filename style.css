@@ -169,6 +169,14 @@
         vertical-align: middle;
         
     }
+    @media (max-width: 600px) {
+  table {
+    font-size: 14px; /* Decrease font size for better readability on small screens */
+  }
 
+  td {
+    padding: 5px; /* Decrease cell padding for better fit */
+  }
+}
     
   
