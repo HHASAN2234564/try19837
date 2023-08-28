@@ -1,104 +1,107 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
 
-    <form name="convert">
-     <spam class="s2">#BMR</spam> calories your body need while in rest.<br><br>
-      
-      Weight: <input type="number" class="i1" min="30" max="150" name="Weight">Kg
-      
-      <spam class="s3">Height: <input type="number" class="i2" min="140" max="200" name="Height">Cm</spam>
-      
-      <br><br>
-      
-      <spam class="s4">Age: <input type="number" class="i2" min="10" max="100" name="Age"></spam>
-      <br><br>
-      
-      
-       <spam class="s1">BMR :</spam><input type="text" name="BMR" disabled value="0">
+<form name="convert">
+ <spam class="s2">#BMR</spam> calories your body need while in rest.<br><br>
+  
+  <label for="gender">Gender:</label>
+  <input type="radio" name="gender" value="male" > Male
+  <input type="radio" name="gender" value="female"> Female
+  
+  <br><br>
+  
+  Weight: <input type="number" class="i1" min="30" max="150" name="Weight">Kg
+  
+  <spam class="s3">Height: <input type="number" class="i2" min="140" max="200" name="Height">Cm</spam>
+  
+  <br><br>
+  
+  <spam class="s4">Age: <input type="number" class="i2" min="10" max="100" name="Age"></spam>
+  <br><br>
+  
+  
+   <spam class="s1">BMR :</spam><input type="text" name="BMR" disabled value="0">
 
-      <input type="button" value="Calculate"  class="button1" onclick="document.convert.BMR.value=(10*document.convert.Weight.value)+(6.25*document.convert.Height.value)-(5*document.convert.Age.value)+5">
-      <br><br><br>
-      
-      <p class="tdee"><spam class="s2">#TDEE</spam> Total Daily Energy Expenditure</p>
-      <p>-Sedentary (little or no exercise)</p>
-      <p>-Lightly active (light exercise/sports 1-3 days/week)</p>
-      <p>-Moderately active (moderate exercise/sports 3-5 days/week)</p>
-      <p>-Very active (hard exercise/sports 6-7 days a week)</p>
-      <p>-Super active (very hard exercise/sports, physical job)
-      </p>
+  <input type="button" value="Calculate"  class="button1" onclick="CalculateBMR()">
+  <br><br><br>
+  
+  <p class="tdee"><spam class="s2">#TDEE</spam> Total Daily Energy Expenditure</p>
+  <p>-Sedentary (little or no exercise)</p>
+  <p>-Lightly active (light exercise/sports 1-3 days/week)</p>
+  <p>-Moderately active (moderate exercise/sports 3-5 days/week)</p>
+  <p>-Very active (hard exercise/sports 6-7 days a week)</p>
+  <p>-Super active (very hard exercise/sports, physical job)</p>
 
-      <br><br>
+  <br><br>
 
-      
-      <input type="button" value="Sedentary"  class="button2" 
-      onclick="document.convert.b1.value=1.2*document.convert.BMR.value">
-      <input type="text" name="b1" class="t1" disabled>
-      <input type="button" value="BULKING"  class="button3" 
-      onclick="document.convert.last.value = (parseFloat(document.convert.b1.value) + 500)">
-      <input type="text" name="last" class="c1">
-      <input type="button" value="Cutting"  class="button3" onclick="document.convert.last.value = (parseFloat(document.convert.b1.value) - 400)">
-
-
-
-
-
-      <br><br>
-      <input type="button" value="Lightly Active"  class="button2"
-      onclick="document.convert.b2.value=1.375*document.convert.BMR.value">
-      <input type="text" name="b2" class="t1"  disabled>
-      <input type="button" value="BULKING"  class="button3" 
-      onclick="document.convert.last8.value = (parseFloat(document.convert.b2.value) + 500)">
-      <input type="text" name="last8" class="c1">
-      <input type="button" value="Cutting"  class="button3" onclick="document.convert.last8.value = (parseFloat(document.convert.b2.value) - 400)">
-
-
-
-      <br><br>
-      <input type="button" value="ModeratelyActive"  class="button2"
-      onclick="document.convert.b3.value=1.55*document.convert.BMR.value">
-      <input type="text" name="b3" class="t1" disabled>
-      <input type="button" value="BULKING"  class="button3" 
-      onclick="document.convert.last2.value = (parseFloat(document.convert.b3.value) + 500)">
-      <input type="text" name="last2" class="c1">
-      <input type="button" value="Cutting"  class="button3" onclick="document.convert.last2.value = (parseFloat(document.convert.b3.value) - 400)">
-
-
-
-
-      <br><br>
-      <input type="button" value="Very Active"  class="button2"
-      onclick="document.convert.b4.value=1.725*document.convert.BMR.value">
-      <input type="text" name="b4" class="t1" disabled>
-      <input type="button" value="BULKING"  class="button3" 
-      onclick="document.convert.last3.value = (parseFloat(document.convert.b4.value) + 500)">
-      <input type="text" name="last3" class="c1">
-      <input type="button" value="Cutting"  class="button3" onclick="document.convert.last3.value = (parseFloat(document.convert.b4.value) - 400)">
-
-
-
-      <br><br>
-      <input type="button" value="Super Active"  class="button2"
-      onclick="document.convert.b5.value=1.9*document.convert.BMR.value">
-      <input type="text" name="b5" class="t1" disabled>
-      <input type="button" value="BULKING"  class="button3" 
-      onclick="document.convert.last4.value = (parseFloat(document.convert.b5.value) + 500)">
-      <input type="text" name="last4" class="c1">
-      <input type="button" value="Cutting"  class="button3" onclick="document.convert.last4.value = (parseFloat(document.convert.b5.value) - 400)">
-      <br><br><br>
-
-
-      <input type="reset" value="clear">
-    </form>
-
-
-
-
+<script>
+function CalculateBMR(){
+    var weight = parseFloat(document.convert.Weight.value);
+    var height = parseFloat(document.convert.Height.value);
+    var age = parseFloat(document.convert.Age.value);
+    var gender = document.convert.gender.value; 
     
+    var bmr = 0;
+    if (gender === "male") {
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+    } else if (gender === "female") {
+        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161; 
+    }
     
+    document.convert.BMR.value = bmr.toFixed(2);
     
-  </body>
+    var tdeeFactors = [1.2, 1.375, 1.55, 1.725, 1.9];
+    for (var i = 1; i <= 5; i++) {
+        var tdee = bmr * tdeeFactors[i - 1];
+        document.getElementById('maintain' + i).value = tdee.toFixed(2);
+        document.getElementById('bulking' + i).value = (tdee + 500).toFixed(2);
+        document.getElementById('cutting' + i).value = (tdee - 400).toFixed(2);
+    }
+}
+</script>
+
+<table border="3px">
+  <tr>
+    <th>TDEE</th>
+    <th>Maintain</th>
+    <th>Bulking</th>
+    <th>Cutting</th>
+  </tr>
+  <tr>
+    <td class="m1">Sedentary</td>
+    <td><input type="text" id="maintain1" disabled class="t1"></td>
+    <td><input type="text" id="bulking1" disabled class="t1"></td>
+    <td><input type="text" id="cutting1" disabled class="t1"></td>
+  </tr>
+  <tr>
+    <td class="m1">Lightly Active</td>
+    <td><input type="text" id="maintain2" disabled class="t1"></td>
+    <td><input type="text" id="bulking2" disabled class="t1"></td>
+    <td><input type="text" id="cutting2" disabled class="t1"></td>
+  </tr>
+  <tr>
+    <td class="m1">Moderately Active</td>
+    <td><input type="text" id="maintain3" disabled class="t1"></td>
+    <td><input type="text" id="bulking3" disabled class="t1"></td>
+    <td><input type="text" id="cutting3" disabled class="t1"></td>
+  </tr>
+  <tr>
+    <td class="m1">Very Active</td>
+    <td><input type="text" id="maintain4" disabled class="t1"></td>
+    <td><input type="text" id="bulking4" disabled class="t1"></td>
+    <td><input type="text" id="cutting4" disabled class="t1"></td>
+  </tr>
+  <tr>
+    <td class="m1">Super Active</td>
+    <td><input type="text" id="maintain5" disabled class="t1"></td>
+    <td><input type="text" id="bulking5" disabled class="t1"></td>
+    <td><input type="text" id="cutting5" disabled class="t1"></td>
+  </tr>
+</table>
+</body>
 </html>
